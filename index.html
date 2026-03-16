@@ -242,8 +242,10 @@
     
     #why-blue-tulip .why-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(260px 1fr));
+  gap: 24px;
+  max-width:990px;
+  margin:auto;
 }
 @media (max-width: 900px) {
   #why-blue-tulip .why-grid {
