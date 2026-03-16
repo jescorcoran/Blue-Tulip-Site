@@ -1,119 +1,482 @@
-<span>Documentation-first</span>
-            <span>Owner-friendly reporting</span>
-            <span>Hands-on coordination</span>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blue Tulip Management, LLC | Property + Business Consulting</title>
+  <meta name="description" content="Blue Tulip Management, LLC provides property management support and business consulting with a focus on clarity, accountability, and trusted growth." />
+
+  <!-- Optional: replace with your brand font later (Google Fonts) -->
+  <style>
+    :root{
+      --navy:#0f2742;
+      --blue:#2d6ea6;
+      --sky:#e9f2fb;
+      --ink:#0b1220;
+      --muted:#5b6577;
+      --card:#ffffff;
+      --border:rgba(15,39,66,.12);
+      --shadow:0 10px 24px rgba(15,39,66,.12);
+      --radius:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      background:linear-gradient(180deg,var(--sky),#fff 55%);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .topbar{
+      position:sticky; top:0; z-index:20;
+      background:rgba(255,255,255,.82);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar .row{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none
+    }
+    
+    brand.logo{
+      height:34px;
+      width:auto:
+      display:block;
+    }
+
+    .brand-logo{
+        height:30px;
+    }
+    
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    
+    .brand strong{
+      display:block;
+      letter-spacing:.3px;
+      color:var(--navy);
+      font-size:1.05rem;
+      line-height:1.1;
+    }
+    
+    .brand span{
+      display:block;
+      font-size:.9rem;
+      color:var(--muted);
+      margin-top:3px;
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:10px;
+      color:var(--ink);
+      font-weight:600;
+      font-size:.95rem;
+    }
+    
+    nav a:hover{background:rgba(45,110,166,.08)}
+    .cta{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      background:var(--navy);
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:0 10px 22px rgba(15,39,66,.18);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .cta:hover{filter:brightness(1.04)}
+    .hero{padding:56px 0 26px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:28px;
+      align-items:start;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height:1.12;
+      letter-spacing:-.6px;
+      color:var(--navy);
+    }
+    .lead{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:1.06rem;
+      max-width:56ch;
+    }
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 10px}
+    .ghost{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      background:#fff;
+      border:1px solid var(--border);
+      text-decoration:none;
+      font-weight:700;
+    }
+    .ghost:hover{box-shadow:0 10px 22px rgba(15,39,66,.08)}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .badge{
+      background:#fff;
+      border:1px solid var(--border);
+      padding:8px 10px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:.9rem;
+      color:var(--navy);
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    .kpi{display:grid; gap:12px}
+    .kpi .item{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:linear-gradient(180deg,#fff,rgba(233,242,251,.55));
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:var(--blue);
+      margin-top:6px;
+      box-shadow:0 0 0 5px rgba(45,110,166,.12);
+    }
+    .item b{display:block; color:var(--navy)}
+    .item p{margin:3px 0 0; color:var(--muted); font-size:.95rem}
+
+    section{padding:34px 0}
+    .section-title{margin:0 0 10px; color:var(--navy); font-size:1.6rem; letter-spacing:-.3px}
+    .section-sub{margin:0 0 18px; color:var(--muted); max-width:70ch}
+
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .service h3{margin:2px 0 6px; color:var(--navy)}
+    .service p{margin:0; color:var(--muted)}
+    .pill{
+      display:inline-block;
+      font-size:.8rem;
+      font-weight:800;
+      letter-spacing:.3px;
+      color:var(--blue);
+      background:rgba(45,110,166,.10);
+      border:1px solid rgba(45,110,166,.18);
+      padding:6px 10px;
+      border-radius:999px;
+      margin-bottom:10px;
+    }
+
+    .two{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    .list{margin:0; padding-left:18px; color:var(--muted)}
+    .list li{margin:8px 0}
+
+    .contact{
+      display:grid; grid-template-columns: 1fr 1fr; gap:16px;
+      align-items:start;
+    }
+    .contact a{color:var(--blue); font-weight:800; text-decoration:none}
+    .contact a:hover{text-decoration:underline}
+    form{display:grid; gap:10px}
+    label{font-weight:800; color:var(--navy); font-size:.92rem}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      font:inherit;
+      background:#fff;
+    }
+    textarea{min-height:120px; resize:vertical}
+    button{
+      padding:12px 14px;
+      border-radius:12px;
+      border:0;
+      background:var(--navy);
+      color:#fff;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 10px 22px rgba(15,39,66,.18);
+    }
+    button:hover{filter:brightness(1.04)}
+
+    footer{
+      padding:24px 0 40px;
+      color:var(--muted);
+      border-top:1px solid var(--border);
+      margin-top:16px;
+    }
+    .small{font-size:.92rem}
+    .footrow{display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr; }
+      .grid3{grid-template-columns:1fr}
+      .two{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="row">
+        <a class="brand" href="#top">
+          <img class="brand-logo" src="Blue Tulip Management logo.png" alt="Blue Tulip Management logo"style="height:120px; width:auto;">
+            <div class="brand-text"
+              <strong>Blue Tulip Management, LLC</strong>
+            <span>Property + Business Consulting</span>
           </div>
+        </a>
+
+        <nav>
+        <div class="contact-bar">
+            <span> 440-552-7853</span>
+            <span> jessica@bluetulipmanagement.com</span>
         </div>
+          <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="btn" href="#contact">Requesta consult</a>a>
+        
+        </nav>
+        <a class="cta" href="#contact">Request a consult</a>
+      </div>
+    </div>
+  </header>
 
-        <div class="hero-card">
-          <div class="mini-label">What we help with</div>
+  <main id="top">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <h1>Trusted management. Clear solutions. Steady growth.</h1>
+            <p class="lead">
+              Blue Tulip Management, LLC helps owners and operators simplify property operations, improve vendor performance,
+              and keep projects moving—without the chaos.
+            </p>
 
-          <div class="feature-stack">
-            <div class="feature-box">
-              <h3>Property Operations Oversight</h3>
-              <p>Vendor coordination, maintenance follow-through, and tenant issue tracking so nothing falls through the cracks.</p>
+            <div class="hero-actions">
+              <a class="cta" href="#contact">Get in touch</a>
+              <a class="ghost" href="#services">View services</a>
             </div>
 
-            <div class="feature-box">
-              <h3>Vendor &amp; Contractor Accountability</h3>
-              <p>Bids, COIs, approvals, and quality checks handled professionally and documented clearly.</p>
+            <div class="badges" aria-label="Highlights">
+              <span class="badge">Multi-tenant support</span>
+              <span class="badge">Vendor & project oversight</span>
+              <span class="badge">Documentation-first</span>
+              <span class="badge">Owner-friendly reporting</span>
             </div>
+          </div>
 
-            <div class="feature-box">
-              <h3>Operational Consulting for Property Owners</h3>
-              <p>Practical systems, better communication, and organized processes that support smoother day-to-day operations.</p>
+          <aside class="card kpi" aria-label="Quick value points">
+            <div class="item">
+              <span class="dot"></span>
+              <div>
+                <b>Proactive property coordination</b>
+                <p>Clear scopes, schedules, and follow-through—so nothing falls through the cracks.</p>
+              </div>
             </div>
+            <div class="item">
+              <span class="dot"></span>
+              <div>
+                <b>Better vendor accountability</b>
+                <p>Quotes, COIs, approvals, and quality checks—handled professionally and consistently.</p>
+              </div>
+            </div>
+            <div class="item">
+              <span class="dot"></span>
+              <div>
+                <b>Practical business consulting</b>
+                <p>Streamlined processes, better communication, and support that matches your goals.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="wrap">
+        <h2 class="section-title">Services</h2>
+        <p class="section-sub">Pick what you need—project-based help or ongoing support. Everything is built around clarity, documentation, and results.</p>
+
+        <div class="grid3">
+          <div class="card service">
+            <div class="pill">Property Management Support</div>
+            <h3>Operations & tenant coordination</h3>
+            <p>Lease compliance support, tenant communication, issue tracking, and consistent follow-through.</p>
+          </div>
+
+          <div class="card service">
+            <div class="pill">Vendor + Project Oversight</div>
+            <h3>Quotes, COIs, scope & quality checks</h3>
+            <p>Bid comparisons, vendor scheduling, approval workflows, and onsite verification.</p>
+          </div>
+
+          <div class="card service">
+            <div class="pill">Business Consulting</div>
+            <h3>Process & systems improvement</h3>
+            <p>Clean workflows, templates, and tools that make your operation run smoother and faster.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="services">
-      <div class="container">
-        <h2>Services</h2>
-        <p class="section-intro">
-          Blue Tulip Management offers flexible support for commercial properties and owner operations — from day-to-day coordination to vendor and project oversight.
+    <!-- APPROACH -->
+    <section id="approach">
+      <div class="wrap">
+        <h2 class="section-title">How we work</h2>
+        <p class="section-sub">A straightforward process designed to reduce stress and create momentum.</p>
+
+        <div class="two">
+          <div class="card">
+            <h3 style="margin:0 0 10px; color:var(--navy)">1) Assess</h3>
+            <ul class="list">
+              <li>Clarify goals, current pain points, and priorities</li>
+              <li>Review documentation, timelines, and constraints</li>
+              <li>Identify “quick wins” and longer-term fixes</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 10px; color:var(--navy)">2) Execute</h3>
+            <ul class="list">
+              <li>Define scope, schedule, and responsibilities</li>
+              <li>Coordinate vendors and stakeholders</li>
+              <li>Provide clean updates and decision points</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 10px; color:var(--navy)">3) Optimize</h3>
+            <ul class="list">
+              <li>Standardize templates, checklists, and workflows</li>
+              <li>Reduce repeat issues and communication gaps</li>
+              <li>Build systems that scale with you</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 10px; color:var(--navy)">4) Support</h3>
+            <ul class="list">
+              <li>Ongoing consulting or monthly support options</li>
+              <li>Owner-friendly reporting</li>
+              <li>Calm, consistent operations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <h2 class="section-title">About Blue Tulip</h2>
+        <p class="section-sub">
+          Blue Tulip represents trusted growth—steady, thoughtful progress with integrity. We bring structure, communication,
+          and accountability to property operations and business projects.
         </p>
 
-        <div class="services-grid">
-          <div class="card">
-            <div class="eyebrow">Property Operations</div>
-            <h3>Property Operations Management</h3>
-            <p>Day-to-day support for tenant communication, vendor scheduling, issue tracking, and lease-related coordination.</p>
-          </div>
-
-          <div class="card">
-            <div class="eyebrow">Vendor Oversight</div>
-            <h3>Vendor &amp; Project Management</h3>
-            <p>Bid collection, contractor coordination, scope review, follow-up, and quality checks to help keep work on track.</p>
-          </div>
-
-          <div class="card">
-            <div class="eyebrow">Consulting</div>
-            <h3>Operational Consulting</h3>
-            <p>Systems, workflows, templates, and communication support that help property owners operate more efficiently.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="who-we-work-with">
-      <div class="container">
-        <h2>Who We Work With</h2>
-        <div class="list-box">
-          <ul>
-            <li>Commercial property owners</li>
-            <li>Multi-tenant retail plazas</li>
-            <li>Small commercial portfolios</li>
-            <li>Owners needing hands-on operational support</li>
-            <li>Businesses that want better vendor coordination and documentation</li>
+        <div class="card">
+          <h3 style="margin:0 0 10px; color:var(--navy)">What you can expect</h3>
+          <ul class="list">
+            <li>Clear communication and documentation</li>
+            <li>Respectful, firm vendor and tenant management</li>
+            <li>Solutions that are practical—not overly complicated</li>
+            <li>Professional presentation you can share with stakeholders</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="container">
-        <h2>About Blue Tulip</h2>
-        <p class="section-intro">
-          Blue Tulip Management, LLC is a boutique property and business consulting company based in Chagrin Falls, Ohio, serving Greater Cleveland and Northeast Ohio. We support owners with practical operational help that keeps properties organized, projects moving, and communication clear.
-        </p>
-
-        <div class="why-grid">
-          <div class="card">
-            <h3>Clear Communication</h3>
-            <p>Responsive, professional coordination with owners, tenants, and vendors.</p>
-          </div>
-
-          <div class="card">
-            <h3>Organized Systems</h3>
-            <p>Documentation, tracking, and follow-through that support smoother operations.</p>
-          </div>
-
-          <div class="card">
-            <h3>Boutique Attention</h3>
-            <p>A more personal, hands-on approach than larger firms can often provide.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- CONTACT -->
     <section id="contact">
-      <div class="container">
-        <h2>Let’s Start the Conversation</h2>
-        <div class="contact-box">
-          <p>Whether you need ongoing support or help with a specific operational challenge, Blue Tulip Management can provide thoughtful, organized guidance tailored to your property and business needs.</p>
-          <p><strong>Email:</strong> jessica@bluetulipmanagement.com</p>
-          <p><strong>Phone:</strong> 440-552-7853</p>
-          <p><strong>Based in:</strong> Chagrin Falls, Ohio</p>
+      <div class="wrap">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Tell us what you’re working on. We’ll respond with next steps and a simple plan.</p>
+
+        <div class="contact">
+          <div class="card">
+            <h3 style="margin:0 0 10px; color:var(--navy)">Reach out</h3>
+            <p class="small" style="margin:0 0 12px; color:var(--muted)">
+              Email is fastest. You can also add a phone number and service area here.
+            </p>
+
+            <p style="margin:0 0 8px;"><b>Email:</b> <a href="mailto:hello@bluetulipmanagement.com">hello@bluetulipmanagement.com</a></p>
+            <p style="margin:0 0 8px;"><b>Phone:</b> <span style="color:var(--muted)">(440) 552-7853</span></p>
+            <p style="margin:0;"><b>Service area:</b> <span style="color:var(--muted)">Northeast Ohio + remote consulting</span></p>
+
+            <hr style="border:0; border-top:1px solid var(--border); margin:16px 0">
+
+            <p class="small" style="margin:0; color:var(--muted)">
+              Prefer a quick intro call? Send a brief note with your goals and timeline.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 10px; color:var(--navy)">Send a message</h3>
+            <!-- This form uses mailto (simple). For a real form, use Formspree/Netlify later. -->
+            <form action="mailto:hello@bluetulipmanagement.com" method="post" enctype="text/plain">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div>
+                <label for="message">What do you need help with?</label>
+                <textarea id="message" name="message" required placeholder="A quick summary (property, vendors, project, consulting, etc.)"></textarea>
+              </div>
+              <button type="submit">Send</button>
+              <p class="small" style="margin:8px 0 0; color:var(--muted)">
+                Tip: Replace the email above with your real business email when ready.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footrow">
+          <div class="small">© <span id="year"></span> Blue Tulip Management, LLC</div>
+          <div class="small">Built for clarity • Trusted growth</div>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>© 2026 Blue Tulip Management, LLC. All rights reserved.</p>
-    </div>
-  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
