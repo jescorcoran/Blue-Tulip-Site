@@ -118,8 +118,10 @@
   
     .hero{
       padding:80px 0 60px;
-      background-image:url("./hero.jpg");
-      background-size:100%;
+      background-image:
+        linear-gradient(rgba(15,39,66,0.25), rgba(15,39,66,0.25)),
+        url("./hero.jpg");
+      background-size:coner;
       background-position:center;
       background-repeat:no-repeat;
     }  
@@ -129,7 +131,7 @@
       color:#ffffff;
     }
     .hero h1 {
-      text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+      text-shadow: 0 4px 18px rgba(0,0,0,0.35);
     }
     .hero-grid{
       display:grid;
