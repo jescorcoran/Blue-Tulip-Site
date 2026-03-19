@@ -118,11 +118,21 @@
   
     .hero{
       padding:80px 0 60px;
-      background-image:url("./hero.jpg");
-      background-size:100%;
-      background-position:center;
-      background-repeat:no-repeat;
+      background:
+        linear-gradient(rgba(10,30,60, 0.65), rgba(10,30,60,0.65));
+        url("./hero.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }  
+    .hero h1,
+    .hero p,
+    .hero .lead {
+      color:#ffffff;
+    }
+    .hero h1 {
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
     
     .hero-grid{
       display:grid;
