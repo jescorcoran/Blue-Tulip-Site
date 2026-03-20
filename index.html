@@ -382,6 +382,46 @@
     grid-template-columns: 1fr;
   }
 }
+
+    .scroll-section {
+  overflow: hidden;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.scroll-left,
+.scroll-right {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-left span {
+  display: inline-block;
+  animation: scrollLeft 20s linear infinite;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.scroll-right span {
+  display: inline-block;
+  animation: scrollRight 20s linear infinite;
+  font-size: 20px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* animations */
+@keyframes scrollLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+    
   </style>
 </head>
 
