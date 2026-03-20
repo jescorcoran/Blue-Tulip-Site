@@ -383,60 +383,24 @@
   }
 }
 
- .scroll-section {
-    width: 100%;    
-    overflow: hidden;
-    padding: 20px 0 30px;
+    .why-intro {
+  text-align: center;
+  padding: 10px 20px 30px;
 }
 
-.scroll-left,
-.scroll-right {
-  width: 100%;
-  overflow: hidden;
- white-space: nowrap;
+.why-intro h2 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
 }
 
-scroll-left span,
-.scroll-right span {
-  display: inline-block;
-  white-space: nowrap;
-  min-width: max-content;
+.why-intro p {
+  margin: 0;
+  font-size: 18px;
+  color: #667085;
 }
 
-.scroll-left span {
-  animation: scrollLeft 30s linear infinite;
-  font-size: 26px;
-  font-weight: 500;
-}
-
-.scroll-right span {
-  animation: scrollRight 34s linear infinite;
-  font-size: 20px;
-  color: #666;
-  margin-top: 10px;
-}
-
-@keyframes scrollLeft {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes scrollRight {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-/* animations */
-@keyframes scrollLeft {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes scrollRight {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-    
   </style>
 </head>
 
