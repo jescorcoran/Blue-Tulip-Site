@@ -384,34 +384,46 @@
 }
 
  .scroll-section {
-    width: 100vw;
-    max-width: 100%      
+    width: 100%;    
     overflow: hidden;
-    padding: 20px 0;
-    text-align: center;
+    padding: 20px 0 30px;
 }
 
 .scroll-left,
 .scroll-right {
   width: 100%;
-  white-space: nowrap;
   overflow: hidden;
-  position: relative;
+ white-space: nowrap;
+}
+
+scroll-left span,
+.scroll-right span {
+  display: inline-block;
+  white-space: nowrap;
+  min-width: max-content;
 }
 
 .scroll-left span {
-  display: inline-block;
-  animation: scrollLeft 20s linear infinite;
+  animation: scrollLeft 30s linear infinite;
   font-size: 26px;
   font-weight: 500;
 }
 
 .scroll-right span {
-  display: inline-block;
-  animation: scrollRight 20s linear infinite;
+  animation: scrollRight 34s linear infinite;
   font-size: 20px;
   color: #666;
   margin-top: 10px;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 /* animations */
