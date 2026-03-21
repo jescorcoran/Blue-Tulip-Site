@@ -23,3 +23,23 @@
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
+@media (max-width: 768px) {
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn,
+  .hero-actions a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-badges {
+    margin-top: 18px;
+  }
+}
