@@ -45,7 +45,7 @@
 }
 
 @media (max-width: 768px) {
-  .hero-badges {
+  .badges {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -53,7 +53,9 @@
     margin-top: 12px;
   }
 
-  .hero-badges > * {
+  .badge {
     text-align: center;
+    width:100%;
+    max-width: 260px;
   }
 }
