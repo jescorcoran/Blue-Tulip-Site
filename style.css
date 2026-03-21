@@ -43,3 +43,18 @@
     margin-top: 18px;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-top: 12px;
+  }
+
+  .hero-badges span,
+  .hero-badges div {
+    flex: 0 1 auto;
+  }
+}
