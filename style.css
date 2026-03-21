@@ -54,7 +54,7 @@
   }
 
   .hero-badges span,
-  .hero-badges div {
-    flex: 0 1 auto;
+  .hero-badges div{
+    text-align: center;
   }
 }
