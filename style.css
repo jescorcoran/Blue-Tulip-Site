@@ -39,8 +39,38 @@
     text-align: center;
   }
 
-  .hero-badges {
-    margin-top: 18px;
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 18px;
+}
+
+.hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.cta {
+  min-width: 260px;
+}
+
+.ghost {
+  min-width: 220px;
+  border: 1.5px solid var(--border);
+}
+
+.badges {
+  margin-top: 18px;
   }
 }
 
