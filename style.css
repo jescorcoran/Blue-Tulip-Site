@@ -59,3 +59,18 @@
     max-width: 260px;
   }
 }
+
+@media (max-width: 768px) {
+  .badges {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .badge {
+    text-align: center;
+    width: 100%;
+  }
+}
+
