@@ -53,8 +53,7 @@
     margin-top: 12px;
   }
 
-  .hero-badges span,
-  .hero-badges div{
+  .hero-badges > * {
     text-align: center;
   }
 }
