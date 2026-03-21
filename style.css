@@ -46,8 +46,8 @@
 
 @media (max-width: 768px) {
   .badges {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     justify-items: center;
     margin-top: 12px;
@@ -55,7 +55,5 @@
 
   .badge {
     text-align: center;
-    width:100%;
-    max-width: 260px;
   }
 }
